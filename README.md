@@ -1,5 +1,5 @@
 # found-named-routes
-Named routes support for [found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes)
+Named routes support for [Found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes)
 
 ## Usage
 
