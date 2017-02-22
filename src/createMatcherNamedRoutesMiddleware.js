@@ -9,16 +9,7 @@ export default function createMatcherNamedRoutesMiddleware(
   function makePaths(route, basePath) {
     const { path, name, children } = route;
 
-    let fullPath;
-    if (!path) {
-      fullPath = basePath;
-    } else if (path[0] === '/') {
-      fullPath = path;
-    } else if (basePath[basePath.length - 1] === '/') {
-      fullPath = `${basePath}${path}`;
-    } else {
-      fullPath = `${basePath}/${path}`;
-    }
+    const fullPath = matcher.joinPath(basePath, path);
 
     if (name) {
       invariant(
@@ -40,7 +31,7 @@ export default function createMatcherNamedRoutesMiddleware(
     const { pathname, params } = location;
 
 
-    if (!name && pathname[0] !== '/') {
+    if (!name && pathname.charAt(0) !== '/') {
       name = pathname;
     }
 
