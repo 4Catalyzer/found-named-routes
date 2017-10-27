@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/4Catalyzer/found-named-routes#readme",
   "peerDependencies": {
-    "farce": "^0.1.0",
-    "found": ">=0.1.0"
+    "farce": "^0.2.1",
+    "found": "^0.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

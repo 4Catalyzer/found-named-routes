@@ -9,7 +9,7 @@ export default function createMatcherNamedRoutesMiddleware(
   function makePaths(route, basePath) {
     const { path, name, children } = route;
 
-    const fullPath = matcher.joinPath(basePath, path);
+    const fullPath = matcher.joinPaths(basePath, path);
 
     if (name) {
       invariant(
