@@ -1,9 +1,7 @@
 import ActionTypes from 'farce/lib/ActionTypes';
 import invariant from 'invariant';
 
-export default function createMatcherNamedRoutesMiddleware(
-  routeConfig, matcher,
-) {
+export default function createMatcherNamedRoutesMiddleware(matcher) {
   const paths = {};
 
   function makePaths(route, basePath) {
@@ -48,7 +46,7 @@ export default function createMatcherNamedRoutesMiddleware(
     };
   }
 
-  routeConfig.forEach(route => makePaths(route, '/'));
+  matcher.routeConfig.forEach(route => makePaths(route, '/'));
 
   return () => next => (action) => {
     const { type, payload } = action;
