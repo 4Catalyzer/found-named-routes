@@ -1,4 +1,4 @@
-import ActionTypes from 'farce/lib/ActionTypes';
+import createLocationMiddleware from 'farce/lib/createLocationMiddleware';
 import invariant from 'invariant';
 
 export default function createMatcherNamedRoutesMiddleware(matcher) {
@@ -48,16 +48,8 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
 
   matcher.routeConfig.forEach(route => makePaths(route, '/'));
 
-  return () => next => (action) => {
-    const { type, payload } = action;
-
-    switch (type) {
-      case ActionTypes.TRANSITION:
-      case ActionTypes.CREATE_HREF:
-      case ActionTypes.CREATE_LOCATION:
-        return next({ type, payload: resolveLocation(payload) });
-      default:
-        return next(action);
-    }
-  };
+  return createLocationMiddleware({
+    makeLocationDescriptor: resolveLocation,
+    makeLocation: location => location,
+  });
 }
