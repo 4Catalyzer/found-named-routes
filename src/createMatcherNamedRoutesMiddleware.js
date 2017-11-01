@@ -5,8 +5,7 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
   const paths = {};
 
   function makePaths(route, basePath) {
-    const { path, name } = route;
-    let { children } = route;
+    const { children, path, name } = route;
 
     const fullPath = matcher.joinPaths(basePath, path);
 
@@ -22,7 +21,9 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
 
     if (children) {
       if (!Array.isArray(children)) { // flatten route routes
-        children = Object.values(children).reduce((a, b) => a.concat(b));
+        Object.values(children).forEach((groupChildren) => {
+          groupChildren.forEach(childRoute => makePaths(childRoute, fullPath));
+        });
       }
 
       children.forEach(childRoute => makePaths(childRoute, fullPath));
