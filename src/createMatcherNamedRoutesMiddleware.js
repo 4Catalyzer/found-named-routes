@@ -24,9 +24,9 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
         Object.values(children).forEach((groupChildren) => {
           groupChildren.forEach(childRoute => makePaths(childRoute, fullPath));
         });
+      } else {
+        children.forEach(childRoute => makePaths(childRoute, fullPath));
       }
-
-      children.forEach(childRoute => makePaths(childRoute, fullPath));
     }
   }
 
