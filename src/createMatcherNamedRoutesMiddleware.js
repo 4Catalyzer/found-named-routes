@@ -20,8 +20,9 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
     }
 
     if (children) {
-      if (!Array.isArray(children)) { // flatten route routes
-        Object.values(children).forEach((groupChildren) => {
+      if (!Array.isArray(children)) {
+        // flatten route routes
+        Object.values(children).forEach(groupChildren => {
           groupChildren.forEach(childRoute => makePaths(childRoute, fullPath));
         });
       } else {
@@ -33,7 +34,6 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
   function resolveLocation(location) {
     let { name } = location;
     const { pathname, params } = location;
-
 
     if (!name && pathname.charAt(0) !== '/') {
       name = pathname;

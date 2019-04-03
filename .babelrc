@@ -1,13 +1,10 @@
 {
   "presets": [
-    ["latest", {
-      "es2015": { "loose": true }
-    }],
-    "stage-1",
-    "react"
+    ["@4c", {
+      "targets": {}
+    }]
   ],
   "plugins": [
-    "transform-runtime", // Need stage-3 Symbol polyfill.
     "add-module-exports"
   ]
 }
