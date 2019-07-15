@@ -13,7 +13,7 @@ const routeConfig = makeRouteConfig(
     <Route name="widgets" path="widgets" component={WidgetsPage}>
       <Route name="widget" path=":widgetId" component={WidgetPage} />
     </Route>
-  </Route>
+  </Route>,
 );
 
 const namedRoutesMiddleware = createNamedRoutesMiddleware(routeConfig);
@@ -21,7 +21,7 @@ const namedRoutesMiddleware = createNamedRoutesMiddleware(routeConfig);
 const BrowserRouter = createBrowserRouter({
   routeConfig,
   // Include queryMiddleware to preserve the default middlewares.
-  historyMiddlewares: [namedRoutesMiddleware, queryMiddleware]
+  historyMiddlewares: [namedRoutesMiddleware, queryMiddleware],
 });
 ```
 
@@ -44,5 +44,5 @@ This middleware will not treat location strings as route names when the location
 ```js
 history.push('/widgets/1');
 
-<Link to="/widgets/1">To widget 1</Link>
+<Link to="/widgets/1">To widget 1</Link>;
 ```
