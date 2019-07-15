@@ -34,12 +34,15 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
   function resolveLocation(location) {
     let { name } = location;
     const { pathname, params } = location;
-    const absoluteUrlRegexp = /^https?:\/\//i;
 
     if (
       !name &&
+      // Assume that anything that looks like an absolute path isn't a route
+      // name.
       pathname.charAt(0) !== '/' &&
-      !absoluteUrlRegexp.test(pathname)
+      // Assume that anything that looks like an absolute URL isn't a route
+      // name either.
+      pathname.indexOf('://') === -1
     ) {
       name = pathname;
     }

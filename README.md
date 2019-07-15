@@ -1,11 +1,11 @@
-# found-named-routes
-Named routes support for [Found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes)
+# Found Named Routes
+
+Named route support for [Found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes)
 
 ## Usage
 
 ```js
-import { createBrowserRouter } from 'found';
-import { makeRouteConfig, Route } from 'found/lib/jsx';
+import { createBrowserRouter, makeRouteConfig, Route } from 'found';
 import { createNamedRoutesMiddleware } from 'found-named-routes';
 
 const routeConfig = makeRouteConfig(
@@ -20,30 +20,29 @@ const namedRoutesMiddleware = createNamedRoutesMiddleware(routeConfig);
 
 const BrowserRouter = createBrowserRouter({
   routeConfig,
-  // add query middleware to preserve the default middlewares
-  historyMiddlewares: [namedRoutesMiddleware, queryMiddlware]
+  // Include queryMiddleware to preserve the default middlewares.
+  historyMiddlewares: [namedRoutesMiddleware, queryMiddleware]
 });
 ```
 
 You can then use either route names or objects with name and optionally params:
-
 
 ```js
 router.push('widgets');
 router.push({ name: 'widget', params: { widgetId: '1' } });
 ```
 
-or using links
-
+or using links:
 
 ```js
 <Link to="widgets">To widgets</Link>
 <Link to={{ name: 'widget', params: { widgetId: '1' } }}>To widget 1</Link>
 ```
 
-You can use normal paths by prepending the string with a '/'
+This middleware will not treat location strings as route names when the location starts with `/` or when the location string contains `://`, as it assumes that the former are absolute paths and that the latter are absolute URLs.
 
 ```js
 history.push('/widgets/1');
+
 <Link to="/widgets/1">To widget 1</Link>
 ```
