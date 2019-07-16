@@ -1,7 +1,7 @@
 {
   "name": "found-named-routes",
   "version": "0.1.0",
-  "description": "Named routes support for found",
+  "description": "Named route support for Found",
   "files": [
     "lib"
   ],
