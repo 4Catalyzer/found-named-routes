@@ -58,8 +58,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "farce": "^0.2.8",
     "found": "^0.4.9",
-    "husky": "^4.0.10",
-    "lint-staged": "^10.0.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.2",
     "prettier": "^1.19.1"
   }
 }
