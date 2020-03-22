@@ -22,11 +22,13 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
     if (children) {
       if (!Array.isArray(children)) {
         // flatten route routes
-        Object.values(children).forEach(groupChildren => {
-          groupChildren.forEach(childRoute => makePaths(childRoute, fullPath));
+        Object.values(children).forEach((groupChildren) => {
+          groupChildren.forEach((childRoute) =>
+            makePaths(childRoute, fullPath),
+          );
         });
       } else {
-        children.forEach(childRoute => makePaths(childRoute, fullPath));
+        children.forEach((childRoute) => makePaths(childRoute, fullPath));
       }
     }
   }
@@ -60,10 +62,10 @@ export default function createMatcherNamedRoutesMiddleware(matcher) {
     };
   }
 
-  matcher.routeConfig.forEach(route => makePaths(route, '/'));
+  matcher.routeConfig.forEach((route) => makePaths(route, '/'));
 
   return createLocationMiddleware({
     makeLocationDescriptor: resolveLocation,
-    makeLocation: location => location,
+    makeLocation: (location) => location,
   });
 }
