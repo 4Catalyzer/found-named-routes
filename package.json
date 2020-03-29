@@ -57,7 +57,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "farce": "^0.2.8",
-    "found": "^0.4.9",
+    "found": "^0.4.10",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^2.0.1"
