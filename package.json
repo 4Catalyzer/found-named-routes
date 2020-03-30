@@ -54,12 +54,12 @@
     "eslint": "^6.8.0",
     "eslint-config-4catalyzer": "^1.1.1",
     "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.2",
-    "farce": "^0.2.8",
+    "farce": "^0.4.1",
     "found": "^0.4.10",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "prettier": "^2.0.1"
+    "lint-staged": "^10.1.0",
+    "prettier": "^2.0.2"
   }
 }
