@@ -1,4 +1,4 @@
-import createLocationMiddleware from 'farce/lib/createLocationMiddleware';
+import createLocationMiddleware from 'farce/createLocationMiddleware';
 import invariant from 'invariant';
 
 export default function createMatcherNamedRoutesMiddleware(matcher) {

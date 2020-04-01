@@ -1,4 +1,4 @@
-import Matcher from 'found/lib/Matcher';
+import Matcher from 'found/Matcher';
 
 import createMiddlewareBase from './createMatcherNamedRoutesMiddleware';
 
