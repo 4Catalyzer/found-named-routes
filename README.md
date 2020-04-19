@@ -1,8 +1,10 @@
 # Found Named Routes
 
-Named route support for [Found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes)
+Named route support for [Found](https://github.com/4Catalyzer/found). Inspired by [use-named-routes](https://github.com/taion/use-named-routes).
 
 ## Usage
+
+Pass your route configuration into `createNamedRoutesMiddleware`, then pass the middleware into `historyMiddlewares` when creating your router.
 
 ```js
 import { createBrowserRouter, makeRouteConfig, Route } from 'found';
@@ -24,6 +26,8 @@ const BrowserRouter = createBrowserRouter({
   historyMiddlewares: [namedRoutesMiddleware, queryMiddleware],
 });
 ```
+
+Note that `createNamedRoutesMiddleware` expects an object route configuration; when using JSX routes, make sure you pass in the output of `makeRouteConfig`.
 
 You can then use either route names or objects with name and optionally params:
 
