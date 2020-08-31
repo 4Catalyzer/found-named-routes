@@ -51,7 +51,7 @@
     "found": ">=0.5.1"
   },
   "devDependencies": {
-    "@4c/babel-preset": "^7.4.0",
+    "@4c/babel-preset": "^7.4.1",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
     "babel-plugin-add-module-exports": "^1.0.2",
@@ -63,7 +63,7 @@
     "farce": "^0.4.5",
     "found": "^0.5.9",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1"
   }
 }
