@@ -63,7 +63,7 @@
     "farce": "^0.4.5",
     "found": "^0.5.9",
     "husky": "^4.3.0",
-    "lint-staged": "^10.3.0",
-    "prettier": "^2.1.1"
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
   }
 }
