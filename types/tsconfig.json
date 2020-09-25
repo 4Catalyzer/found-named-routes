@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-      "forceConsistentCasingInFileNames": true,
-      "lib": ["es2016"],
-      "module": "commonjs",
-      "strict": true,
-      "types": [],
-      "noEmit": true,
-      "baseUrl": ".",
-      "paths": {
-        "found-named-routes": ["."]
-      }
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2016"],
+    "module": "commonjs",
+    "strict": true,
+    "types": [],
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "found-named-routes": ["."]
     }
   }
+}
