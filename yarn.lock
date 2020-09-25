@@ -21,6 +21,13 @@
     lodash "^4.17.15"
     read-pkg-up "^7.0.1"
 
+"@4c/tsconfig@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@4c/tsconfig/-/tsconfig-0.3.1.tgz#90ff0cb4fddde7114ee57eeee912737d017ba0e9"
+  integrity sha512-FBhSdtjfitTiaq590kpxtcnCJsF1LeahEjl5ZYDhAeHT/1pn7i8aho2R1u5eVfSxgYrNy/MVizRer3DwBJh9UA==
+  dependencies:
+    typescript-workspace-plugin "^2.0.1"
+
 "@babel/cli@^7.11.6":
   version "7.11.6"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.11.6.tgz#1fcbe61c2a6900c3539c06ee58901141f3558482"
@@ -4394,6 +4401,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+typescript-workspace-plugin@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/typescript-workspace-plugin/-/typescript-workspace-plugin-2.0.1.tgz#3d88be1c35a7fdf2c0160c8cf569ca8993439a12"
+  integrity sha512-xjIYNFlPIA7IWXvnOFJoAeHPbPJSo0AiQDCRJzaAp3+xZwz6maTgeRLB0oEHVtCqz4Q1CDN6U9kh/2z8sxdDBQ==
 
 typescript@^4.0.3:
   version "4.0.3"

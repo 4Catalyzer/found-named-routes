@@ -1,9 +1,8 @@
 {
+  "extends": "@4c/tsconfig/web.json",
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
     "lib": ["es2016"],
     "module": "commonjs",
-    "strict": true,
     "types": [],
     "noEmit": true,
     "baseUrl": ".",
