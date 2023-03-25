@@ -66,7 +66,7 @@
     "eslint-config-4catalyzer-typescript": "^3.0.2",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "farce": "^0.4.5",
     "found": "^0.5.9",
     "husky": "^4.3.6",
