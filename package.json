@@ -70,7 +70,7 @@
     "farce": "^0.4.5",
     "found": "^0.5.9",
     "husky": "^4.3.6",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
   },
